@@ -1,0 +1,24 @@
+{
+    "name": "jerni/amf-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony2 Bundle Amf Extension",
+    "keywords": ["symfony2", "block", "amf"],
+    "homepage": "https://github.com/jerni/amf-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "jse",
+            "email": "ernijosephstalin@gmail.com",
+            "homepage": "http://jsmierni.com/"
+        }
+    ],
+    "minimum-stability" : "dev",
+    "autoload": {
+        "psr-4": { "Jse\\AmfBundle\\": "" }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "v1.0.x-dev"
+        }
+    }
+}
