@@ -1,6 +1,11 @@
 amf-service
 ===============
 
+php composer.phar require jerni / amf-bundle
+
+branch: dev-master
+
+
 Register bundle in AppKernel.php
 
     public function registerBundles()
