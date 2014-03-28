@@ -1,7 +1,7 @@
 amf-service
 ===============
 
-php composer.phar require jerni / amf-bundle
+php composer.phar require jerni/amf-bundle
 
 branch: dev-master
 
