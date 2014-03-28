@@ -10,6 +10,14 @@ Register bundle in AppKernel.php
             
     }
 
-command:
+add in config/routing.yml
 
-php app/console create:block blockname --bundle=Jse/BlockGeneratorBundle
+jse_amf_bundle:
+    resource: "@JseAmfBundle/Resources/config/routing.xml"
+    prefix:   /
+
+default route:
+  /gateway-service
+  
+  
+
