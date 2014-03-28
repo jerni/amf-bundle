@@ -10,7 +10,11 @@
     </parameters>
     <services>
         <!-- amf service -->
-        <service id="jse.amf" class="%jse.amf.class%"></service>
+        <service id="jse.amf" class="%jse.amf.class%">
+          <call method="setContainer">
+              <argument type="service" id="service_container" />
+          </call>
+        </service>
         
         <!-- amf service container -->
         <service id="jse.amf.container" class="%jse.amf.container.class%"></service>

@@ -3,12 +3,11 @@ namespace Jse\AmfBundle\Services;
 
 class AmfService{
 
-  public function load($folder = 'AmfServices'){
+  protected $container;
+
+  public function load(){
   
-    if(empty($folder)){
-      echo 'no service define';
-      die();
-    }
+    $folder = 'AmfServices';
 
     defined('APPLICATION_PATH') || define('APPLICATION_PATH', realpath(dirname(__FILE__)));
 
@@ -27,7 +26,7 @@ class AmfService{
     )));
     
     
-    $service_path = $this->getContainer()->getParameter('service_path');
+    $service_path = $this->container->getParameter('service_path');
     
     if(empty($service_path)){
       $folder = APPLICATION_PATH . '/'.$folder.'/';
@@ -62,8 +61,7 @@ class AmfService{
      return $server->handle();
   }
   
-  protected function getContainer(){
-    global $kernel;
-    return $kernel->getContainer();
+  public function setContainer($container){
+    return $this->container = $container;
   }
 }
