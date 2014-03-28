@@ -1,4 +1,4 @@
-block-generator
+amf-service
 ===============
 
 Register bundle in AppKernel.php
@@ -12,12 +12,31 @@ Register bundle in AppKernel.php
 
 add in config/routing.yml
 
-jse_amf_bundle:
-    resource: "@JseAmfBundle/Resources/config/routing.xml"
-    prefix:   /
+    jse_amf_bundle:
+        resource: "@JseAmfBundle/Resources/config/routing.xml"
+        prefix:   /gateway-service
+        
+    
+add in config/config.yml
 
-default route:
-  /gateway-service
+    jse_amf:
+        service_path: Acme/DemoBundle
+        
   
+sample service:
+
+    //Acme/DemoBundle/Services/AmfService/TestService.php
+  
+    use Jse\AmfBundle\Services\AmfServiceContainer;
+
+    class TestSevice extends AmfServiceContainer{
+        
+        public function testsAction($obj){
+            $cat = $this->getContainer()->get('sonata.classification.manager.category')->findOneBy(array('id' => 1));
+            return json_encode($cat->getName());
+        }
+        
+    }
+
   
 

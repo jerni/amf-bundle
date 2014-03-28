@@ -4,7 +4,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
 
-    <route id="jse_amf_gateway" pattern="/gateway-service">
+    <route id="jse_amf_gateway" pattern="/">
         <default key="_controller">JseAmfBundle:Amf:index</default>
     </route>
 </routes>
